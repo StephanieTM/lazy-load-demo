@@ -16,6 +16,13 @@ module.exports = {
   bail: true,
   optimization: {
     minimize: false,
+    splitChunks: {
+      chunks: 'all',
+      minSize: 10,
+      cacheGroups: {
+        defaultVendors: false,
+      },
+    },
   },
   module: {
     rules: [
