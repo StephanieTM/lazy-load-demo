@@ -38,4 +38,11 @@ module.exports = {
       template: resolvePath('src/index.ejs'),
     }),
   ],
+  devServer: {
+    static: {
+      directory: resolvePath('public'),
+    },
+    historyApiFallback: true,
+    port: 9000,
+  },
 };
